@@ -910,63 +910,63 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-.services .icon-box {
-  text-align: center;
-  border: 1px solid #e2eefd;
-  padding: 80px 20px;
-  transition: all ease-in-out 0.3s;
-  background: #fff;
+/* General styles */
+.section-bg {
+  background-color: #f6f9fe;
 }
 
-.services .icon-box .icon {
-  margin: 0 auto;
-  width: 64px;
-  height: 64px;
-  background: #f1f6fe;
-  border-radius: 4px;
-  border: 1px solid #deebfd;
+/* Services Section */
+#services .icon-box {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+#services .icon-box .icon {
+  margin: 0 auto 20px auto;
+  width: 60px;
+  height: 60px;
+  background: #f6f9fe;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  transition: ease-in-out 0.3s;
+  transition: background 0.3s ease-in-out;
 }
 
-.services .icon-box .icon i {
-  color: #3b8af2;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-}
-
-.services .icon-box h4 a {
-  color: #222222;
-  transition: ease-in-out 0.3s;
-}
-
-.services .icon-box p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 25px 0 rgba(16, 110, 234, 0.1);
-}
-
-.services .icon-box:hover h4 a,
-.services .icon-box:hover .icon i {
+#services .icon-box .icon i {
+  font-size: 36px;
   color: #106eea;
 }
 
-.services .icon-box:hover .icon {
-  border-color: #106eea;
+#services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#services .icon-box h4 a {
+  color: #222222;
+  transition: color 0.3s;
+}
+
+#services .icon-box h4 a:hover {
+  color: #106eea;
+}
+
+#services .icon-box p {
+  font-size: 15px;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+#services .icon-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 /*--------------------------------------------------------------
@@ -1804,5 +1804,26 @@ section {
     float: none;
     text-align: center;
     padding: 2px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 30vh; /* Reduz a altura do header */
+  }
+
+  #hero h1 {
+    font-size: 24px; /* Reduz o tamanho da fonte do título */
+    line-height: 30px;
+  }
+
+  #hero h2 {
+    font-size: 16px; /* Reduz o tamanho da fonte do subtítulo */
+    line-height: 20px;
+  }
+
+  #hero .btn-get-started {
+    font-size: 12px; /* Reduz o tamanho da fonte do botão */
+    padding: 8px 20px; /* Ajusta o padding do botão */
   }
 }
