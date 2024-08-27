@@ -1460,6 +1460,7 @@
       max-width: 100px; /* Ajuste o tamanho conforme necessário */
       opacity: 0.8;
       transition: opacity 0.3s ease;
+      padding: 10px; /* Adiciona espaço ao redor de cada logo */
     }
 
     .clients .swiper-slide img:hover {
@@ -1487,10 +1488,10 @@
   <!-- Swiper JS -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Inicialização do Swiper -->
+  <!-- Inicialização do Swiper com configuração responsiva -->
   <script>
     var swiper = new Swiper('.clients-slider', {
-      slidesPerView: 5, // Quantos slides mostrar por vez (ajustável para 4 ou 5)
+      slidesPerView: 5, // Quantos slides mostrar por vez em telas grandes
       spaceBetween: 30, // Espaço entre os slides
       loop: true, // Loop contínuo
       pagination: {
@@ -1501,6 +1502,18 @@
         delay: 2500, // Atraso entre as transições automáticas
         disableOnInteraction: false,
       },
+      breakpoints: {
+        // Quando a largura da janela é <= 768px (tamanho de tablet)
+        768: {
+          slidesPerView: 3, // Mostrar 3 logos por slide em tablets
+          spaceBetween: 20
+        },
+        // Quando a largura da janela é <= 480px (tamanho de celular)
+        480: {
+          slidesPerView: 2, // Mostrar 2 logos por slide em celulares
+          spaceBetween: 20, // Espaçamento adequado entre os logos
+        }
+      }
     });
   </script>
 
